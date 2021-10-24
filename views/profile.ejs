@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Daily Water Intake</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+
+    <section>
+      <h1>Daily Water Intake</h1>
+
+      <form action="/profile" method="POST">
+
+        
+        <label for="time">Time:</label>
+        <input class="time" type="time" id="timeOfDrink" name="time">
+        <p>Current Date is <input class="date" id='date' type='date' name ='date'>.</p>
+
+        <label for="AmoutOfWater">How many ounces of water did you drink? </label>
+    
+        <input type="range" class="range" name="amount" id="waterAmount" min="0" max="128" step="1" value="16">
+        
+        <output class="price-output" for="price"></output>
+
+        <button type="submit">Submit</button>
+    
+      </form>
+    </section>
+    
+    <section>
+      <h3></h3>
+          <ul class="messages">
+          <% for(var i=0; i<messages.length; i++) {%>
+            <li class="message">
+              <span><%= messages[i].date %></span>
+              <span><%= messages[i].time %></span>
+              <span><%= messages[i].amount %> oz</span>
+              <button value="<%=messages[i]._id%>" class="fa fa-trash" aria-hidden="true"></button>
+            </li>
+          <% } %>
+          </ul>
+    </section>
+
+    <!-- <h2 id="result">Total oz today</h2> -->
+
+
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/c0e668a8ad.js" crossorigin="anonymous"></script>
+  </div>
+</body>
+
+</html>

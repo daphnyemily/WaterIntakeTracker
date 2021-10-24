@@ -1,0 +1,22 @@
+body{
+  margin: auto;
+  margin-top: 50px;
+  background-image: url(./img/waterApp.png);
+  background-size: 200%;
+  background-position: initial;
+  background-position-x: -50px;
+  font-family: 'Zen Kurenaido', sans-serif;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+.jumbotron {
+  padding: 30px;
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 2.1428571435;
+  color: inherit;
+  background: rgba(96, 160, 196, 0.6);
+}
